@@ -1,0 +1,399 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color:#e6e6e6;
+    margin: 0;
+    color: #19191b;
+    display: inline-block;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*************************************************Header*************************************************/
+
+.main-header{
+    background-color: #EAC926;
+    padding: 20px;
+}
+
+.main-header-bottom-bar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;  
+}
+
+.main-header-bottom-bar a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.first-nav-bar{
+    padding-bottom: 10px;
+}
+
+.copy-header{
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+}
+
+.logo{
+    width: 150px;
+    display: flex;
+    height: 130px;
+    margin-left: 25px;
+}
+
+.barra{
+    text-align: center;
+    color: black;
+    width: 50vw;
+    background-color: #ebebeb;
+    border: solid 1px black;
+    border-radius: 3px;
+    padding: 1px;
+    margin-left: 25px;
+    margin-right: 250px;
+    height: 40px;
+}
+
+.main-header-top-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*************************************************Main*************************************************/
+
+.producto{
+    border: 2px;
+    margin: 7px;
+}
+.truck{
+    color: #39b54a;
+    height: 30px;
+    width: 30px;
+    border: solid 1px #39b54a;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    right: 20px;
+    top: -15;
+    position: absolute;
+}
+
+.burguer-menu{
+    background-color: #03264C;
+    color: white;
+    display: block;
+    max-width: 40px;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    margin:auto;
+}
+
+.descuento{ 
+    font-size: 16px;
+    color: #39b54a;
+    width: 70vw;
+}
+
+.precio{
+    font-size: 18px;
+    width: 30vw;
+}
+
+.box-precio-descuento{
+    display: flex;
+    justify-content: space-between;
+}
+
+.descrip{ 
+    font-size: 16px;
+    visibility: hidden;
+    height: 0vh;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.producto:hover .descrip{
+    visibility: visible;
+    height: 5vh;
+}
+
+.producto:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+h3{
+    font-size: 24px;
+    }
+
+.box-producto, .producto{
+    padding: 15px;
+    border-top: 1px solid #ebebeb;
+    background-color: white;
+}
+
+main{
+    max-width: 100%;
+    margin: auto;
+}
+
+/*************************************************Footer*************************************************/
+
+
+footer{
+    margin-bottom: 30%;
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    background-color: white;
+    padding: 15px;
+    width: 100%;
+}
+
+h4{
+    font-size: 25;
+}
+
+.fas{
+    font-size: 25;
+}
+
+.copy{
+    font-size: 10px;
+    text-align: left;
+    padding-top: 20px;
+}
+
+#iconFooter{
+    color: #1259c3;
+    font-size: 2em; 
+}
+
+
+/*************************************************Querys*************************************************/
+
+/*Mobile*/
+@media (min-width: 1px){
+    .descrip{
+        visibility: hidden;
+    }
+    .first-nav-bar, .second-nav-bar{
+        visibility: hidden;
+    }
+    .main-header{
+        margin-top: 0px;
+    }
+    .main-header-bottom-bar{
+        margin-bottom: -100px;
+    }
+    .main-header-top-bar{
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        margin-top: -45px;
+        justify-content: space-around;
+    }
+    .copy-header{
+        display: flex;
+        font-size: 7px;
+        justify-content: space-around;
+    }
+    .copy-header-TABLET{
+        visibility: hidden;
+    }
+    
+    
+    .logo{
+        width: 30vw;
+        margin: 0;
+    }
+    .barra{
+        width: 40vw;
+        font-size: 11px;
+        margin: 0;
+        padding: 13px;
+    }
+    .banner{
+        width: 100%;
+    }
+
+    main section img{
+       width: 100%;
+       padding: 0;
+    } 
+    
+
+    }
+    img{
+        padding: 15px;
+    }
+
+    .box-producto{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 90%;
+    }
+    .box-precio-descuento{
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .precio{
+        width: 30vw;
+        margin-left: 40px;
+    }
+    .descuento{
+        width: 70vw;
+        text-align: center;
+    
+        
+    }
+    .truck{
+        display: flex;
+    }
+    
+    h3{
+        margin-left: 16px;
+        font-size: 12px;
+    }
+
+
+/*Tablet*/
+@media (min-width: 481px){
+    .main-header{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main-header-top-bar{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+    }
+    .logo{
+        width: 30vw;
+    }
+
+    .barra{
+        width: 30vw;
+        font-size: 12px;
+    }
+
+    .copy-header-TABLET{
+        width: 30vw;
+        font-size: 7px;
+    }
+    .copy-header{
+        visibility: hidden;  
+    }
+
+    .main-header-bottom-bar{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 5px;
+    }
+    .first-nav-bar{
+        display: flex;
+        flex-wrap: wrap;    
+    }
+  
+    .burguer-menu{
+        display: none;
+    }
+    .big-box-productos{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 10px;
+        justify-content: space-around;
+    }
+    .producto{
+        width: 45vw;
+    }
+    h3{
+        padding: 7px;
+        text-align: left;
+    }
+    img{
+        max-width: 100%;
+        margin:1px;
+    }
+    .box-precio-descuento{
+        width: 34vw;
+        justify-content: space-between;
+    }
+    .precio{
+        width: 30%;
+        margin-left: -15px;
+    }
+    .descuento{
+        width: 30%;
+        margin-right: -35px;
+    }
+    .truck{
+        display: contents;
+        margin-left: 20px;
+
+
+    }
+    .descrip{
+        width: 90%;
+        visibility: visible;
+        font-weight: lighter;
+        margin-left: -15px;
+    }
+}
+
+
+/*Desktop*/
+@media (min-width: 769px){
+    .burguer-menu{
+        display: none;
+    }
+    .big-box-productos{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .producto{
+        width: 20%;
+        padding: 5px;
+        margin:auto;    
+    }
+
+    .container-footer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .box-footer{
+        width: 30vw;
+    }
+    #icon{
+        font-size: 25px;
+    }
+    
+    #icon:hover{
+        color: #0022AA;
+    }
+
+}
