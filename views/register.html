@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    
+    <title>Mercado Liebre - Register</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     rel="stylesheet" />
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/register.css">
 </head>
 
@@ -22,97 +22,129 @@
     <header class="main-header">
 
         <div class="main-header-top-bar">
-            <img src="images/logo-mercado-liebre.svg" class="logo" alt="">
+
+            <a href="/"><img src="images/logo-mercado-liebre.svg" class="logo" alt=""></a>  
             <div class="barra">
                 <p>Buscar productos, marcas <i class="fas fa-search"></i></p>
             </div>
-            <div class="copy-header">
-                <i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito
+
+            <div class="copy-header-TABLET">
+                <i class="fas fa-hand-holding-usd"></i><p>Comprá en cuotas y sin tarjeta de crédito</p>
             </div>
+            
         </div>
-        
-      </header>
+
+        <nav class="main-header-bottom-bar">
+            <div class="first-nav-bar">
+                <li class="lista"><a href="#">Ofertas</a></li>
+                <li class="lista"><a href="#">Tiendas oficiales</a></li>
+                <li class="lista"><a href="#">Vender</a></li>
+                <li class="lista"><a href="#">Ayuda</a></li>  
+            </div>
+
+            <div class="second-nav-bar">
+                <li class="lista"><a href="/register">Creá tu cuenta</a><i class="far fa-id-card"></i></li>
+                <li class="lista"><a href="/login">Ingresá</a><i class="fas fa-sign-in-alt"></i></li>
+                <li class="lista"><a href="#">Mis compras</a><i class="fas fa-shopping-basket"></i></li>
+            </div>
+        </nav>
+
+        <a class="burguer-menu" href="">
+            <i class="fas fa-bars"></i>
+        </a>
+    
+    </header>
    
 <main>
     
-    
     <form action="/registro" method="POST" class="form">
-
 
         <div class="control-form">
             <label for="Nombre y apellido" class="title">Datos de usuarix</label>
         </div>
 
         <div class="control-form">
-            <input type="text" name="fullname" placeholder="Nombre y apellido" class="control">
+            <input type="text" name="fullname" placeholder="Nombre y apellido" class="control" required>
         </div>
 
         <div class="control-form">
-            <input type="text" name="User" placeholder="Usuario" class="control">
+            <input type="text" name="User" placeholder="Usuario" class="control" required>
         </div>
 
         <div class="control-form">
-            <input type="text" name="birth" placeholder="Fecha de nacimiento" class="control">
+            <input type="date" name="birth" placeholder="Fecha de nacimiento" class="control" required>
         </div>
 
         <div class="control-form">
-            <input type="email" name="email" placeholder="E-mail" class="control">
+            <input type="email" name="email" placeholder="E-mail" class="control" required>
         </div>
 
-
         <div class="control-form">
-            <label for=""  class="title">Perfil de usuarix:</label>
+            <label for="" class="title">Perfil de usuarix:</label>
+
             <label for="">Comprador</label>
-            <input type="radio" name"buyer">
+            <input type="radio" name="perfil" required>
             <label for="">Vendedor</label>
-            <input type="radio" name"seller">
+            <input type="radio" name="perfil" required> 
         </div>
 
         <div class="control-form">
-            <label for="" class="title">Categorás de interés</label>
-            <select name="categorias" class="control">
-                <option value="comprador">Elecro</option>
-                <option value="moda">Moda</option>
-                <option value="hogar">Hogar</option>
-                <option value="juegueteria">Jueguetería</option>
-                <option value="vidasana">Vida sana</option>
-            </select>
+            <label for="" class="title">Categorías de interés:</label>
         </div>
+            
+        <div class="categorias">
 
-            <div class="control-form">
-                <label for="" class="title">Foto de usuarix</label>
+            <div>
+                <input type="checkbox" name="categorias" value="Electro">
+                <label for="">Electro</label>
             </div>
+            <div>
+                <input type="checkbox" name="categorias" value="Moda">
+                <label for="">Moda</label>
+            </div>
+            <div>
+                <input type="checkbox" name="categorias" value="Hogar">
+                <label for="">Hogar</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="categorias" value="Jueguetería">
+                <label for="">Jueguetería</label>
+            </div>
+            <div>
+                <input type="checkbox" name="categorias" value="Vida sana">
+                <label for="">Vida sana</label>
+            </div>        
+
+        </div>
+            
+        <div class="control-form-foto">
+            <label for="" class="title">Foto de usuarix</label>
+            <input type="file" name="fotodeusuario" accept=".jpg" multiple required>
+        </div>
         
+        <div class="control-form">
             <div class="control-form">
                 <label for="" class="title">Contraseña</label>
-            <input type="password" class="control">
-                <label for="" class="title">Confirmar contraseña</label>
-            <input type="password" class="control">
+                <input type="password" class="control1" required>
             </div>
+            <div class="control-form">
+                <label for="" class="title">Confirmar contraseña</label>
+                <input type="password" class="control" required>
+            </div>
+        </div>
 
-        
-            <button type="submit" class="button-form">Enviar</button>
-
-            <button type="reset" class="button-form">Borrar todo</button>
-
-
-
-
+        <a href="/views/home.html"><button type="submit" class="button-form">Enviar</button></a>
+    
+        <button type="reset" class="button-form">Borrar todo</button>
 
     </form>
 
-
 </main>
-
-
-
-
-
 
 <footer>
 
     <div>
-
         <div>
             <i id="icon" class="fas fa-credit-card"></i>
             <h4>Pagá con tarjeta o en efectivo</h4>
@@ -130,10 +162,9 @@
             <h4>Seguridad, de principio a fin</h4>
             <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
         </div>
-
     </div>
     
-<p class="copy">Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+    <p class="copy">Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
 
 </footer>
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mercado Liebre - Login</title>
 
     
 
@@ -14,47 +14,58 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     rel="stylesheet" />
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css">
+    
 </head>
 
 <body>
 
     <header class="main-header">
 
-        <div class="main-header-top-bar">
-            <img src="images/logo-mercado-liebre.svg" class="logo" alt="">
-            <div class="barra">
-                <p>Buscar productos, marcas <i class="fas fa-search"></i></p>
-            </div>
-            <div class="copy-header-TABLET">
-                    <i class="fas fa-hand-holding-usd"></i>
-                    Comprá en cuotas y sin tarjeta de crédito
-    
-            </div>
+        <a href="/"><img src="images/logo-mercado-liebre.svg" class="logo" alt=""></a>
+
+        <div class="barra">
+            <p>Buscar productos, marcas <i class="fas fa-search"></i></p>
         </div>
 
-        
-      </header>
-    
+        <div class="copy-header-TABLET">
+            <i class="fas fa-hand-holding-usd"></i>
+            Comprá en cuotas y sin tarjeta de crédito
+        </div>
 
+        <nav class="main-header-bottom-bar">
+            <div class="first-nav-bar">
+                <li class="lista"><a href="#">Ofertas</a></li>
+                <li class="lista"><a href="#">Tiendas oficiales</a></li>
+                <li class="lista"><a href="#">Vender</a></li>
+                <li class="lista"><a href="#">Ayuda</a></li>  
+            </div>
+
+            <div class="second-nav-bar">
+                <li class="lista"><a href="/register">Creá tu cuenta</a><i class="far fa-id-card"></i></li>
+                <li class="lista"><a href="/login">Ingresá</a><i class="fas fa-sign-in-alt"></i></li>
+                <li class="lista"><a href="#">Mis compras</a><i class="fas fa-shopping-basket"></i></li>
+            </div>
+        </nav>
+        
+    </header>
+    
 <main>
 
+    <div class="control-login">
+        <input type="text" name="nombre-de-usuario" placeholder="Nombre de usuarix" class="input-login" required>
+    </div>
 
+    <div class="control-login">
+        <input type="password" name="contraseña" placeholder="Contraseña" class="input-login" required>
+    </div>
 
-<div class="control-login">
-    <input type="text" name="nombre-de-usuario" placeholder="Nombre de usuarix" class="input-login">
-</div>
-
-<div class="control-login">
-    <input type="password" name="contraseña" placeholder="Contraseña" class="input-login">
-</div>
-
-<div class="button-login">
-    <button type="submit" class="button-send">Enviar</button>
-</div>
+    <div class="button-login">
+        <a href="/"><button type="submit" class="button-send">Enviar</button></a>
+    </div>
 
 </main>
-
 
 <footer>
 
